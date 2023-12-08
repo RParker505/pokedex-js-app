@@ -1,3 +1,5 @@
+// Height is in m
+
 let pokemonList = [
     {name: 'Venusaur', height: 2, types: ['grass', 'poison']},
     {name: 'Pidgey', height: 0.3, types: ['flying', 'normal']},
