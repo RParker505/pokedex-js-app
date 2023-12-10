@@ -6,15 +6,15 @@ const pokemonList = [
     {name: 'Jigglypuff', height: 0.5, types: ['fairy', 'normal']}
 ];
 
-// Loop iterates over each item in pokemonList array
+// Loop iterates over each item in pokemonList array and highlights large pokemon
 for (let i = 0; i < pokemonList.length; i++) {
-    document.write('<p>pokemonList[i].name' + ' (height:' + 'pokemonList[i].height' + ')');
-}
-
-// Highlight a large pokemon
-for (let i = 0; i < pokemonList.length; i++){
-    if (pokemonList[i].height > 1){
-      console.log(pokemonList[i].name + " is a big Pokemon!");
-      document.write('<p>pokemonList[i].name' + ' is a big Pokemon');
-    }
+    const pokemon = pokemonList[i];
+    const pokemonHeight = pokemonList[i].height;
+    const html = `<h1>${pokemon.name}</h1>
+                  <h3>${
+                    pokemonHeight >= 1
+                      ? `Height: ${pokemonHeight}m - Wow! That is big!`
+                      : `Height: ${pokemonHeight}m`
+                  }</h3>`;
+    document.write(html);
   }
