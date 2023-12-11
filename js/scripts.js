@@ -10,7 +10,7 @@ const pokemonList = [
 for (let i = 0; i < pokemonList.length; i++) {
     const pokemon = pokemonList[i];
     const pokemonHeight = pokemonList[i].height;
-    const html = `<h1>${pokemon.name}</h1>
+    const html = `<h2>${pokemon.name}</h2>
                   <h3>${
                     pokemonHeight >= 1
                       ? `Height: ${pokemonHeight}m - Wow! That is big!`
