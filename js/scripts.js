@@ -24,7 +24,7 @@ let pokemonRepository = (function () {
 })();
 
 // forEach loop writes pokemon details to index page
-pokemonList.forEach(function(pokemon) {
+pokemonRepository.getAll().forEach(function(pokemon) {
   document.write(`<h2>${pokemon.name}</h2>
                 <h3>${
                   pokemon.height >= 1
