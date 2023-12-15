@@ -6,15 +6,12 @@ const pokemonList = [
     {name: 'Jigglypuff', height: 0.5, types: ['fairy', 'normal']}
 ];
 
-// Loop iterates over each item in pokemonList array and highlights large pokemon
-for (let i = 0; i < pokemonList.length; i++) {
-    const pokemon = pokemonList[i];
-    const pokemonHeight = pokemonList[i].height;
-    const html = `<h2>${pokemon.name}</h2>
-                  <h3>${
-                    pokemonHeight >= 1
-                      ? `Height: ${pokemonHeight}m - Wow! That is big!`
-                      : `Height: ${pokemonHeight}m`
-                  }</h3>`;
-    document.write(html);
-  }
+// forEach loop writes pokemon details to index page
+pokemonList.forEach(function(pokemon) {
+  document.write(`<h2>${pokemon.name}</h2>
+                <h3>${
+                  pokemon.height >= 1
+                    ? `Height: ${pokemon.height}m - Wow! That is big!`
+                    : `Height: ${pokemon.height}m`
+                }</h3>`);
+});
