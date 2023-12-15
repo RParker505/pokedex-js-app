@@ -12,6 +12,7 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
+  // add function adds a pokemon to the pokemonList (but it must be an object and must have 3 key/value pairs)
   function add (item) {
     if (typeof item !== 'object'){
     console.log('Item being added must be an object')
