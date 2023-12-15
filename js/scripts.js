@@ -13,7 +13,11 @@ let pokemonRepository = (function () {
   }
 
   function add (item) {
-    pokemonList.push(item)
+    if (typeof item !== 'object'){
+    console.log('Item being added must be an object')
+    } else if (item.length < 3){
+      console.log('Item being added must have 3 key value pairs')
+    } else {pokemonList.push(item)}
   }
 
   return {
