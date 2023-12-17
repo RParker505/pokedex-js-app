@@ -31,4 +31,5 @@ let pokemonRepository = (function () {
 // forEach loop writes pokemon details to index page
 pokemonRepository.getAll().forEach(function(pokemon) {
   let pokemonDetails = document.querySelector('.pokemon-list');
+  let listItem = document.createElement('li');
 });
