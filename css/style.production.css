@@ -6,28 +6,36 @@
 */
 
 * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
 }
 
 .pokemon-list{
-    list-style: none;
+  list-style: none;
 }
 
 .pokemon-button{
-    border: 5px #7FFFD4 solid;
-    background-color: #5F9EA0;
-    padding: 16px 32px;
-    margin: 4px 2px;
-    -webkit-transition-duration: opacity 0.4s;
-         -o-transition-duration: opacity 0.4s;
-            transition-duration: opacity 0.4s;
-    cursor: pointer;
-  }
+  border: 5px #7FFFD4 solid;
+  background-color: #5F9EA0;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  -webkit-transition-duration: opacity 0.4s;
+       -o-transition-duration: opacity 0.4s;
+          transition-duration: opacity 0.4s;
+  cursor: pointer;
+}
 
 button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus {
-      cursor: pointer;
-    /* lets mouse appear as a hand when hovering over the button */
-    opacity: 0.7;
-    /* reduces opacity of the button when hovered over or focused on. Could change the color instead if there's a background image. */
+    cursor: pointer;
+  /* lets mouse appear as a hand when hovering over the button */
+  opacity: 0.7;
+  /* reduces opacity of the button when hovered over or focused on. Could change the color instead if there's a background image. */
 }
