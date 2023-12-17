@@ -8,6 +8,10 @@
     padding: 20px;
 }
 
+.pokedex-main__title {
+    margin-left: 50px;
+}
+
 .pokemon-list{
     list-style: none;
 }
@@ -19,6 +23,11 @@
     margin: 4px 2px;
     transition-duration: opacity 0.4s;
     cursor: pointer;
+  }
+
+button:active, .pokemon.button:active {
+    background-color: #008B8B;
+    color: white;
   }
 
 button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus {
