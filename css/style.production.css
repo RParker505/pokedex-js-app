@@ -1,0 +1,33 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.pokemon-list{
+    list-style: none;
+}
+
+.pokemon-button{
+    border: 5px #7FFFD4 solid;
+    background-color: #5F9EA0;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    -webkit-transition-duration: opacity 0.4s;
+         -o-transition-duration: opacity 0.4s;
+            transition-duration: opacity 0.4s;
+    cursor: pointer;
+  }
+
+button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus {
+      cursor: pointer;
+    /* lets mouse appear as a hand when hovering over the button */
+    opacity: 0.7;
+    /* reduces opacity of the button when hovered over or focused on. Could change the color instead if there's a background image. */
+}
