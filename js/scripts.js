@@ -8,12 +8,12 @@ let pokemonRepository = (function () {
     {name: 'Jigglypuff', height: 0.5, types: ['fairy', 'normal']}
   ];
 
-  function getAll () {
+  function getAll() {
     return pokemonList;
   }
 
   // add function adds a pokemon to the pokemonList (but it must be an object and must have 3 key/value pairs)
-  function add (item) {
+  function add(item) {
     if (typeof item !== 'object'){
     console.log('Item being added must be an object')
     } else if (Object.keys(item).length < 3){
@@ -22,7 +22,7 @@ let pokemonRepository = (function () {
   }
 
   // addListItem function creates a list item and button displaying the pokemon name for each pokemon
-  function addListItem (pokemon) {
+  function addListItem(pokemon) {
     let pokemonDetails = document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
     let button = document.createElement('button');
@@ -34,7 +34,8 @@ let pokemonRepository = (function () {
 
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 
 })();
