@@ -36,4 +36,6 @@ pokemonRepository.getAll().forEach(function(pokemon) {
                     ? `Height: ${pokemon.height}m - Wow! That is big!`
                     : `Height: ${pokemon.height}m`
                 }</h3>`);
+
+  let pokemonDetails = document.querySelector('.pokemon-list');
 });
