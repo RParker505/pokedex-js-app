@@ -21,6 +21,17 @@ let pokemonRepository = (function () {
     } else {pokemonList.push(item)}
   }
 
+  // addListItem function creates a list item and button displaying the pokemon name for each pokemon
+  function addListItem (pokemon) {
+    let pokemonDetails = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('pokemon-button');
+    listItem.appendChild(button);
+    pokemonDetails.appendChild(listItem);
+  }
+
   return {
     add: add,
     getAll: getAll
