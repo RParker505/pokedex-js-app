@@ -60,6 +60,7 @@ let pokemonRepository = (function () {
     })
   }
 
+  // loadDetails function adds image, height and types to each pokemon (is executed in showDetails function)
   function loadDetails(item) {
     let url = item.details;
     return fetch(url).then(function (response){
