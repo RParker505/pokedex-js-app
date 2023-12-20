@@ -8,6 +8,8 @@ let pokemonRepository = (function () {
     {name: 'Jigglypuff', height: 0.5, types: ['fairy', 'normal']}
   ];
 
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
   function getAll() {
     return pokemonList;
   }
@@ -45,7 +47,7 @@ let pokemonRepository = (function () {
 
   // loadList function fetches data from API, adds each fetched Pokemon to pokemonList with the add function
   function loadList() {
-    return fetch(apiURL).then(function (response) {
+    return fetch(apiUrl).then(function (response) {
       return response.json();
     }).then(function (json) {
       json.results.forEach(function (item) {
