@@ -41,10 +41,27 @@ let pokemonRepository = (function () {
     // eventListener calls the showDetails function when the button is clicked
   }
 
+  // loadList function fetches data from API, adds each fetched Pokemon to pokemonList with the add function
+  function loadList() {
+    return fetch(apiURL).then(function (response) {
+      return response.json();
+    }).then(function (json) {
+      json.results.forEach(function (item) {
+        let pokemon = {
+          name: item.name,
+          detailsUrl: item.url
+        };
+        add(pokemon);
+      });
+    }).catch(function (e) {
+      console.error(e)
+    })
+  }
+
   return {
     add: add,
     getAll: getAll,
-    addListItem: addListItem
+    loadList: loadList
   };
 
 })();
