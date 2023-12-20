@@ -66,7 +66,10 @@ let pokemonRepository = (function () {
 
 })();
 
-// forEach loop writes pokemon details to index page
-pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.addListItem(pokemon);
+pokemonRepository.loadList().then(function() {
+  // Now the data is loaded!
+  // forEach loop writes pokemon details to index page
+  pokemonRepository.getAll().forEach(function(pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
 });
