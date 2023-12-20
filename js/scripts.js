@@ -14,12 +14,12 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
-  // add function adds a pokemon to the pokemonList (but it must be an object and must have 3 key/value pairs)
+  // add function adds a pokemon to the pokemonList (but it must be an object and must have 2 key/value pairs)
   function add(item) {
     if (typeof item !== 'object'){
     console.log('Item being added must be an object')
-    } else if (Object.keys(item).length < 3){
-      console.log('Item being added must have 3 key value pairs')
+    } else if (Object.keys(item).length < 2){
+      console.log('Item being added must have 2 key value pairs')
     } else {pokemonList.push(item)}
   }
 
@@ -80,6 +80,7 @@ let pokemonRepository = (function () {
   return {
     add: add,
     getAll: getAll,
+    addListItem: addListItem,
     loadList: loadList,
     loadDetails: loadDetails
   };
