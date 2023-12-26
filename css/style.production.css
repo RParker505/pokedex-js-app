@@ -5,6 +5,8 @@
 * Browsers: last 4 version
 */
 
+/* color palette here: https://coolors.co/f0f8ff-223759-7fffd4-5f9ea0-aab9cf */
+
 body {
   background-color: #F0F8FF;
 
@@ -45,12 +47,31 @@ h3 {
   padding: 20px;
 }
 
-.pokedex-main__title {
-  margin-left: 50px;
+.pokedex-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pokemon-list{
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pokemon-button{
@@ -74,4 +95,66 @@ button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus {
   /* lets mouse appear as a hand when hovering over the button */
   opacity: 0.7;
   /* reduces opacity of the button when hovered over or focused on. Could change the color instead if there's a background image. */
+}
+
+/* sets modal to be hidden by default */
+#pokemon-modal {
+  display: none;
+}
+
+/* sets the container to cover the entire page when visible (when .is-visible class is present) */
+#pokemon-modal.is-visible {
+  position: fixed;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(170, 185, 207, 0.5);
+  
+  /* to show it above other content */
+  z-index: 999; 
+  
+  /* to allow scrolling if the screen is not high enough*/
+  overflow: auto; 
+  
+  /* this is used to center the modal */
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+}
+
+/* the modal box itself */
+.modal {
+  margin: auto;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #AAB9CF;
+  padding: 30px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.modal-close {
+  float: right;
+  border: 0;
+  background: none;
+  color: #DC143C;
+  text-decoration: underline;
+}
+
+.modal h1 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 0;
+}
+
+.modal img {
+  padding: 20px;
 }
