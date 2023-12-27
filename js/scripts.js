@@ -16,8 +16,8 @@ let pokemonRepository = (function () {
   function add(item) {
     if (typeof item !== 'object'){
     console.log('Item being added must be an object')
-    } else if (Object.keys(item).length < 2){
-      console.log('Item being added must have 2 key value pairs')
+    } else if (Object.keys(item).name === -1){
+      console.log('Item being added must have a name')
     } else {pokemonList.push(item)}
   }
 
