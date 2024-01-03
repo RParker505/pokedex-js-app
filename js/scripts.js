@@ -16,7 +16,7 @@ let pokemonRepository = (function () {
   function add(item) {
     if (typeof item !== 'object'){
     console.log('Item being added must be an object')
-    } else if (Object.keys(item).name === -1){
+    } else if (!Object.keys(item).includes("name")){
       console.log('Item being added must have a name')
     } else {pokemonList.push(item)}
   }
