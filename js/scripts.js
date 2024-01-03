@@ -24,11 +24,11 @@ let pokemonRepository = (function () {
   // showDetails function logs pokemon details
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      showModal(pokemon.name, pokemon.height);
+      showModal(pokemon);
     });
   }
 
-  function showModal(title, text) {
+  function showModal(pokemon) {
     // Clear all existing modal content
     pokemonModal.innerHTML = '';
     let modal = document.createElement('div');
@@ -41,13 +41,13 @@ let pokemonRepository = (function () {
     closeButtonElement.addEventListener('click', hideModal);//hides Modal when button is clicked
   
     let titleElement = document.createElement('h1');
-    titleElement.innerText = title.toUpperCase();
+    titleElement.innerText = pokemon.name.toUpperCase();
   
     let contentElement = document.createElement('p');
-    contentElement.innerText = ('Height:' + ' ' + text);
+    contentElement.innerText = ('Height:' + ' ' + pokemon.height);
     
     let pokemonImage = document.createElement('img');
-    pokemonImage.src = 'https://placehold.co/200';
+    pokemonImage.src = pokemon.imageUrl;
   
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
