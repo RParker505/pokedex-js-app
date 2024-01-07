@@ -39,8 +39,11 @@ h3 {
           box-sizing: border-box;
 }
 
-.page-header {
-display: inline-block;
+.pokedex-title {
+font-family: 'Inter', sans-serif; /* Use Inter font if available, sans-serif if not */
+color: #223759;
+font-weight: 600;
+font-size: 30px; 
 }
 
 .pokedex-main {
@@ -54,7 +57,7 @@ display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .pokemon-list{
@@ -95,12 +98,12 @@ button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus {
 }
 
 /* sets modal to be hidden by default */
-#pokemon-modal {
+#pokemonModal {
   display: none;
 }
 
 /* sets the container to cover the entire page when visible (when .is-visible class is present) */
-#pokemon-modal.is-visible {
+#pokemonModal.is-visible {
   position: fixed;
   padding: 20px;
   -webkit-box-sizing: border-box;
@@ -124,9 +127,11 @@ button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus {
 }
 
 /* the modal box itself */
-.modal {
-  margin: auto;
-  display: inline-block;
+.modal-dialog {
+  /* margin: auto; */
+  position: absolute;
+  left: 0;
+  right:0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #AAB9CF;
@@ -136,13 +141,13 @@ button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus {
   text-align: center;
 }
 
-.modal-close {
+/* .modal-close {
   float: right;
   border: 0;
   background: none;
   color: #DC143C;
   text-decoration: underline;
-}
+} */
 
 .modal h1 {
   margin-top: 0;
@@ -154,4 +159,9 @@ button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus {
 
 .modal img {
   padding: 20px;
+}
+
+.list-group-item {
+  background-color: #F0F8FF;
+  border: none;
 }
