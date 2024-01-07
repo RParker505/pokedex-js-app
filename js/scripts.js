@@ -43,7 +43,10 @@ function showModal(pokemon) {
   let pokemonHeight = $('<p>' + 'Height: ' + pokemon.height + '</p>');
   // let pokemonTypes = $('<p>' + 'Types: ' + pokemon.types + '</p>')
   let pokemonTypes=document.createElement("p");
-  pokemonTypes.innerText="Types: " + pokemon.types.forEach(function(e){let types=document.createElement("p");types.classList.add("pokemonTypes"),types.innerText=pokemon.types.name, pokemonTypes.appendChild(types)});
+  pokemonTypes.innerText="Types: " + pokemon.types.forEach(function(e){
+    let types=document.createElement("p");
+    types.classList.add("pokemonTypes"),types.innerText=pokemon.types.name, pokemonTypes.appendChild(types)
+  });
   
   modalTitle.append(pokemonName);
   modalBody.append(pokemonImage);
@@ -61,6 +64,7 @@ function showModal(pokemon) {
     button.classList.add('pokemon-button', 'btn', 'btn-primary');
     button.setAttribute('data-toggle','modal');
     button.setAttribute('data-target','#pokemonModal');
+    button.setAttribute('role', 'button');
     listItem.appendChild(button);
     pokemonDetails.appendChild(listItem);
     button.addEventListener('click', function(){
