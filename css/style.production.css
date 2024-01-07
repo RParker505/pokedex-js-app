@@ -41,7 +41,6 @@ h3 {
 
 .pokedex-title {
 font-family: 'Inter', sans-serif; /* Use Inter font if available, sans-serif if not */
-color: #223759;
 font-weight: 600;
 font-size: 30px; 
 }
@@ -91,7 +90,8 @@ button:active, .pokemon.button:active {
 }
 
 button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus {
-    cursor: pointer;
+background-color: #5F9EA0;  
+cursor: pointer;
   /* lets mouse appear as a hand when hovering over the button */
   opacity: 0.7;
   /* reduces opacity of the button when hovered over or focused on. Could change the color instead if there's a background image. */
