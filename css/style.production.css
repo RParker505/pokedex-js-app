@@ -40,11 +40,7 @@ h3 {
 }
 
 .page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 20px;
+display: inline-block;
 }
 
 .pokedex-main {

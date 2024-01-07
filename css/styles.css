@@ -32,9 +32,7 @@ h3 {
 }
 
 .page-header {
-    display: flex;
-    width: 100%;
-    padding: 20px;
+  display: inline-block;
 }
 
 .pokedex-main {
