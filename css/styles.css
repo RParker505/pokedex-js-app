@@ -144,3 +144,25 @@ button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus, .btn:h
     background-color: #F0F8FF;
     border: none;
   }
+  
+@media all and (max-width: 320px) {
+  .pokemon-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .pokemon-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .pokemon-list {
+    grid-template-columns: 1fr 1fr 1fr;        
+    grid-gap: 10px;
+  }
+  h1 {
+      font-size: 22px;
+  }
+}

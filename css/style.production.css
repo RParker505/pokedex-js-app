@@ -175,27 +175,27 @@ cursor: pointer;
   border: none;
 }
 
-@media all and (max-width: 500px) {
-  .pokemon-list {
-      -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  }
+@media all and (max-width: 320px) {
+.pokemon-list {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
 }
 
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .pokemon-list {
-      -ms-grid-columns: 1fr 20px 1fr;
-      grid-template-columns: 1fr 1fr;
-  }
+@media all and (max-width: 500px) {
+.pokemon-list {
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr;
+}
 }
 
 @media all and (max-width: 750px) {
-  .pokemon-list {
--ms-grid-columns: 1fr 10px 1fr 10px 1fr;
-grid-template-columns: 1fr 1fr 1fr;        
-grid-gap: 10px;
-  }
-  h1 {
-      font-size: 22px;
-  }
+.pokemon-list {
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;        
+  grid-gap: 10px;
+}
+h1 {
+    font-size: 22px;
+}
 }
