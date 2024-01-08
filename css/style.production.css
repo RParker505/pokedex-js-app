@@ -68,13 +68,14 @@ font-size: 30px;
 
 .pokemon-list{
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20px 20% 20px 20% 20px 20%;
+  grid-template-columns: repeat(4, 20%);
+  grid-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -171,4 +172,29 @@ cursor: pointer;
 .list-group-item {
   background-color: #F0F8FF;
   border: none;
+}
+
+@media all and (max-width: 500px) {
+  .pokemon-list {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .pokemon-list {
+      -ms-grid-columns: 1fr 20px 1fr;
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .pokemon-list {
+-ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+grid-template-columns: 1fr 1fr 1fr;        
+grid-gap: 10px;
+  }
+  h1 {
+      font-size: 22px;
+  }
 }
