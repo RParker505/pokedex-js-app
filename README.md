@@ -6,5 +6,6 @@ To   build   a   small   web   application   with   HTML,   CSS,   and   JavaScr
 * HTML
 * CSS
 * JavaScript
+* Bootstrap
 * [API that's used](https://pokeapi.co/api/v2/pokemon/)
  
