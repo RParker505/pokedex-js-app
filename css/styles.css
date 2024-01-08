@@ -32,9 +32,12 @@ h3 {
 }
 
 .pokedex-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   font-family: 'Inter', sans-serif; /* Use Inter font if available, sans-serif if not */
- font-weight: 600;
- font-size: 30px; 
+  font-weight: 600;
+  font-size: 30px; 
 }
 
 .pokedex-main {
