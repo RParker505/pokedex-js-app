@@ -41,12 +41,9 @@ function showModal(pokemon) {
   let pokemonImage = $('<img class="modal-img" style="width=50%">');
   pokemonImage.attr('src', pokemon.imageUrl);
   let pokemonHeight = $('<p>' + 'Height: ' + pokemon.height + '</p>');
-  // let pokemonTypes = $('<p>' + 'Types: ' + pokemon.types + '</p>')
-  let pokemonTypes=document.createElement("p");
-  pokemonTypes.innerText="Types: " + pokemon.types.forEach(function(e){
-    let types=document.createElement("p");
-    types.classList.add("pokemonTypes"),types.innerText=pokemon.types.name, pokemonTypes.appendChild(types)
-  });
+  const pokemonTypes = document.createElement("p");
+  const types = pokemon.types.map(function (item) { return item.type.name; });
+  pokemonTypes.innerText = "Types: " + types.join(', ');
   
   modalTitle.append(pokemonName);
   modalBody.append(pokemonImage);
