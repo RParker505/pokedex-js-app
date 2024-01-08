@@ -41,16 +41,14 @@ h3 {
 }
 
 .pokedex-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     margin-top: 150px;
 }
 
 .pokemon-list{
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, 20%);
+    grid-template-columns: repeat(auto-fill, 200px);
     grid-gap: 20px;
     justify-content: center;
     align-items: center;
@@ -144,25 +142,21 @@ button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus, .btn:h
     background-color: #F0F8FF;
     border: none;
   }
-  
-@media all and (max-width: 320px) {
-  .pokemon-list {
-    grid-template-columns: 1fr;
-  }
-}
 
-@media all and (max-width: 500px) {
-  .pokemon-list {
-    grid-template-columns: 1fr 1fr;
+  @media all and (max-width: 577px) {
+    .pokedex-main {
+      margin-top: 220px;
   }
-}
+    h1 {
+        font-size: 22px;
+    }
+  }
 
-@media all and (max-width: 750px) {
-  .pokemon-list {
-    grid-template-columns: 1fr 1fr 1fr;        
-    grid-gap: 10px;
+  @media all and (max-width: 685px) {
+    .pokedex-main {
+      margin-top: 200px;
   }
-  h1 {
-      font-size: 22px;
+    h1 {
+        font-size: 22px;
+    }
   }
-}
