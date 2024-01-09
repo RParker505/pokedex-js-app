@@ -61,7 +61,7 @@ font-size: 30px;
   list-style: none;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -165,9 +165,9 @@ cursor: pointer;
   border: none;
 }
 
-@media all and (max-width: 577px) {
+@media all and (max-width: 575px) {
   .pokedex-main {
-    margin-top: 220px;
+    margin-top: 250px;
 }
   h1 {
       font-size: 22px;
