@@ -75,6 +75,13 @@ function showModal(pokemon) {
     return fetch(apiUrl).then(function (response) {
       return response.json();
     }).then(function (json) {
+      // Sorting the results array alphabetically based on the 'name' property
+      json.results.sort((a, b) => {
+        const itemA = a.name.toLowerCase(); // Convert to lowercase for case-insensitive sorting
+        const itemB = b.name.toLowerCase();
+        return itemA.localeCompare(itemB); // Use localeCompare for string comparison
+      });
+      // iterate over each item and call the add method
       json.results.forEach(function (item) {
         let pokemon = {
           name: item.name,
