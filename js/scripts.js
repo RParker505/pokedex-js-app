@@ -109,24 +109,6 @@ function showModal(pokemon) {
     });
   }
 
-  // These eventListeners are now handled by the Boostrap modal
-  // // executes the hideModal function when ESC is hit
-  // window.addEventListener ('keydown', (e) => {
-  //   let pokemonModal = document.querySelector('#pokemon-modal');
-  //   if (e.key === 'Escape' && pokemonModal.classList.contains('is-visible')) {
-  //     hideModal();
-  //   }
-  // });
-
-  // pokemonModal.addEventListener('click', (e) => {
-  //   // Since this is also triggered when clicking INSIDE the modal
-  //   // We only want to close if the user clicks directly on the overlay (modal-container)
-  //   let target = e.target;
-  //   if (target === pokemonModal) {
-  //     hideModal();
-  //   }
-  // });
-
   return {
     add: add,
     getAll: getAll,
