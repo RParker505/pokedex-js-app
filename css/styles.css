@@ -143,20 +143,17 @@ button:hover, button:focus, .pokemon.button:hover, .pokemon.button:focus, .btn:h
     border: none;
   }
 
-  @media all and (max-width: 575px) {
+  @media all and (min-width: 320px) {
     .pokedex-main {
-      margin-top: 250px;
+      margin-top: 220px;
   }
     h1 {
         font-size: 22px;
     }
   }
 
-  @media all and (max-width: 685px) {
+  @media all and (min-width: 786px) {
     .pokedex-main {
-      margin-top: 200px;
+      margin-top: 150px;
   }
-    h1 {
-        font-size: 22px;
-    }
   }
