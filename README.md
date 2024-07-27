@@ -16,7 +16,7 @@ To run this app locally:
 
 1. Clone the repository:
 ```
-git clone https://https://github.com/RParker505/pokedex-js-app
+git clone https://github.com/RParker505/pokedex-js-app
 ```
 2. Open index.html in your browser.
 
